@@ -1,11 +1,11 @@
 set(SOURCES
-        Manager.cpp
-        EntryConfig.cpp
-        Axis.cpp
-        Task.cpp
+    Manager.cpp
+    EntryConfig.cpp
+    Axis.cpp
+    Task.cpp
 )
 
-string(REPLACE ".cxx" ".h" HEADERS "${SOURCES}")
+string(REPLACE ".cpp" ".hpp" HEADERS "${SOURCES}")
 list(APPEND HEADERS "VariantMagic.hpp" "Utils.hpp")
 
 add_library(AnalysisTreeQA STATIC ${SOURCES} G__AnalysisTreeQA.cxx)
@@ -27,7 +27,7 @@ install(
         FILES
         ${HEADERS}
         DESTINATION
-        include
+        include/AnalysisTreeQA
         COMPONENT
         Devel
 )
@@ -37,6 +37,14 @@ set(PCM_FILE_NAME libAnalysisTreeQA)
 install(
         FILES
         "${CMAKE_CURRENT_BINARY_DIR}/${PCM_FILE_NAME}_rdict.pcm"
+        DESTINATION
+        lib
+        OPTIONAL
+)
+
+install(
+        FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/${PCM_FILE_NAME}.rootmap"
         DESTINATION
         lib
         OPTIONAL
