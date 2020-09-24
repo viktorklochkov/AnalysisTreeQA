@@ -4,7 +4,7 @@ set(AnalysisTree_LIBRARY_DIR ${AnalysisTree_INSTALL_DIR}/lib)
 
 ExternalProject_Add(AnalysisTree_Ext
         GIT_REPOSITORY  "https://github.com/viktorklochkov/AnalysisTree.git"
-        GIT_TAG         "v1.0.2"
+        GIT_TAG         "master"
         UPDATE_DISCONNECTED ${UPDATE_DISCONNECTED}
         SOURCE_DIR      "${EXTERNAL_DIR}/AnalysisTree_src"
         BINARY_DIR      "${EXTERNAL_DIR}/AnalysisTree_build"
