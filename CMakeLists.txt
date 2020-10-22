@@ -10,6 +10,8 @@ set(AnalysisTreeQA_BUILD_TASKS OFF CACHE BOOL "Build user' AnalysisTreeQA tasks 
 set(AnalysisTreeQA_BUILD_TESTS OFF CACHE BOOL "Build tests for AnalysisTreeQA")
 set(AnalysisTreeQA_BUNDLED_AT ON CACHE BOOL "Get and build AnalysisTree")
 set(AnalysisTreeQA_BUNDLED_AT_VERSION "v1.0.2" CACHE STRING "Bundled AnalysisTree version")
+set(AnalysisTreeQA_BUNDLED_CUTS ON CACHE BOOL "Get and build AnalysisTreeCuts")
+set(AnalysisTreeQA_BUNDLED_CUTS_VERSION "v0.0.1" CACHE STRING "Bundled AnalysisTreeCuts version")
 
 
 if (NOT DEFINED CMAKE_CXX_STANDARD)

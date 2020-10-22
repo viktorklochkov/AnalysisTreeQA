@@ -34,6 +34,10 @@ target_link_libraries(AnalysisTreeQA
         AnalysisTreeBase
         AnalysisTreeInfra
         )
+target_include_directories(AnalysisTreeQA
+        PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+        )
 
 install(TARGETS AnalysisTreeQA EXPORT AnalysisTreeQATargets
         LIBRARY DESTINATION lib

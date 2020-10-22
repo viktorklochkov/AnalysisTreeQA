@@ -1,10 +1,10 @@
 #include "AnalysisTree/Cuts.hpp"
 #include "CbmCuts.h"
 
-#include "src/EntryConfig.hpp"
-#include "src/Manager.hpp"
-#include "src/Task.hpp"
-#include "src/Utils.hpp"
+#include "EntryConfig.hpp"
+#include "Manager.hpp"
+#include "Task.hpp"
+#include "Utils.hpp"
 
 typedef AnalysisTree::QA::EntryConfig::PlotType PlotType;
 using AnalysisTree::QA::gNbins;
