@@ -17,5 +17,12 @@ target_link_libraries(cbm_qa PUBLIC
         AnalysisTreeQA
         AnalysisTreeCuts_Static
         )
+add_executable(na61_qa na61_qa.cpp)
+add_dependencies(na61_qa  AnalysisTreeQA ${PROJECT_DEPENDENCIES})
+target_link_libraries(na61_qa  PUBLIC
+        ${ROOT_LIBRARIES}
+        AnalysisTreeQA
+        AnalysisTreeCuts_Static
+        )
 
-install (TARGETS cbm_qa RUNTIME DESTINATION bin)
+#install (TARGETS cbm_qa RUNTIME DESTINATION bin)
